@@ -50,15 +50,20 @@ button {
                text-transform: uppercase;
                background-color: #fff;
                border: 3px solid #000;
-               text-transform: uppercase;
+               color: transparent;
                display: inline-flex;
                align-items: center;
                justify-content: center;
-               font-size: 30px;
                width: 38px;
                height: 48px;   
                margin: 0 5px;  
                overflow: hidden;
+
+               span {
+                  color: #000;
+                  font-size: 30px;
+                  text-transform: uppercase;
+               }
 
                &:empty {
                   color: transparent;
