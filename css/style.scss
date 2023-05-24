@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap');
+
+body {
+   background: rgb(5,21,51);
+   background: radial-gradient(circle, rgba(5,21,51,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+button {   
+   border: none;
+}
+
+.wof {
+   &--container {
+      display: flex;
+      align-items: center;
+      height: 100vh;
+   }
+
+   &__wrapper {
+      margin: 0 auto;
+      width: 1240px;
+   }
+
+   &__puzzleBoard {
+      background: url("../img/wof-frame.jpg") no-repeat center;
+      background-size: cover;
+      width: 910px;
+      height: 545px;
+      position: relative;
+
+      .wof__letters {
+         position: absolute;
+         padding-top: 124px;
+         display: flex;
+         flex-wrap: wrap;
+         width: 680px;
+         left: -10px;
+         right: 0;
+         margin: 0 auto;
+
+         .wof__row {
+            margin: 12px 23px 0;
+            display: inline-flex;
+            
+            span {
+               text-transform: uppercase;
+               background-color: #fff;
+               border: 3px solid #000;
+               text-transform: uppercase;
+               display: inline-flex;
+               align-items: center;
+               justify-content: center;
+               font-family: "Inconsolata", monospace;
+               font-size: 30px;
+               width: 38px;
+               height: 48px;   
+               margin: 0 5px;  
+
+               &:empty {
+                  color: transparent;
+                  background: transparent;
+                  border-color: transparent;
+               }
+            }
+         }
+      }
+
+      .wof__clue {
+         h2 {
+            color: #fff;
+               position: absolute;
+               bottom: 11px;
+               width: 100%;
+               text-align: center;
+         }
+      }
+   }
+   
+   &__actionBoard {
+      padding-left: 20px;
+      flex: 1;
+   }
+
+   &__letterBoard {
+      display: grid;
+      grid-gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(3.5em, 1fr));
+      margin-bottom: 32px;
+
+      button {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-family: 'Inconsolata', monospace;
+         font-size: 30px;
+         border: 2px solid #f7bf5e;
+         background-color: #081735;
+         color: #fff;
+         box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+
+         &:hover {
+            box-shadow: 7px 6px 28px 1px rgba(247, 191, 94, 1.24);
+         }
+
+         &.has,
+         &.none {
+            color: #000;
+            border: transparent;
+
+            &:hover {
+               box-shadow: none;
+            }
+         }
+
+         &.has {
+            background-color: #04D5A6;
+         }
+
+         &.none {
+            background-color: #FE0643;
+         }
+      }
+   }
+
+   &__strikeBoard {
+      h2 {
+         color: #fff;
+      }
+
+      ul {
+         li {
+            display: inline-block;
+
+            span {
+               display: block;
+               border-radius: 50%;
+               height: 20px;
+               width: 20px;
+               background-color: white;
+
+               &.wof__strikeStatus--bad {
+                  background-color: #FE0643;
+               }
+            }
+         }
+      }
+   }
+}
+
+.flex {
+   display: flex;
+}
