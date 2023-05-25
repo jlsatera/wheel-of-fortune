@@ -118,8 +118,17 @@ button {
 .wof__btn:active {
   background: #ae8626;
 }
+.wof__strikeBoard {
+  margin-bottom: 32px;
+}
 .wof__strikeBoard h2 {
   color: #fff;
+  display: inline-block;
+  line-height: 1;
+}
+.wof__strikeBoard ul {
+  display: inline-block;
+  padding-left: 0;
 }
 .wof__strikeBoard ul li {
   display: inline-block;

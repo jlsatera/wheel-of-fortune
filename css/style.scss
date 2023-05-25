@@ -131,10 +131,6 @@ button {
       }
    }
 
-   &__ctaBtns {
-      
-   }
-
    &__btn {
       &.reveal {         
          background: rgb(174,134,38);
@@ -152,11 +148,18 @@ button {
    }
 
    &__strikeBoard {
+      margin-bottom: 32px;
+
       h2 {
          color: #fff;
+         display: inline-block;
+         line-height: 1;
       }
 
       ul {
+         display: inline-block;
+         padding-left: 0;
+
          li {
             display: inline-block;
 
