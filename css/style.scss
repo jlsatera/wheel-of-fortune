@@ -163,6 +163,10 @@ button {
          li {
             display: inline-block;
 
+            &:not(:first-child) {
+               margin-left: 10px;
+            }
+
             span {
                display: block;
                border-radius: 50%;
@@ -170,8 +174,10 @@ button {
                width: 20px;
                background-color: white;
 
-               &.wof__strikeStatus--bad {
-                  background-color: #d50101;
+               &.wof__strikeCircle {
+                  &.bad {
+                     background-color: #d50101;
+                  }
                }
             }
          }

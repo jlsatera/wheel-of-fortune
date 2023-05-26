@@ -4,8 +4,9 @@
       <title>Wheel of Fortune</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <link rel="stylesheet" href="css/normalize.css">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="./css/normalize.css">
+      <link rel="stylesheet" href="./css/style.css">
+      <script src="./js/script.js"></script>
    </head>
 
    <body>
@@ -13,89 +14,47 @@
          <div class="wof wof--container">
             <div class="wof__wrapper flex">
                <div class="wof__puzzleBoard">
-                  <div class="wof__letters">
-                     <div class="wof__row row1">
-                        <span><span class="riser">G</span></span>
-                        <span>_</span>
-                        <span>_</span>
-                        <span><span class="riser">l</span></span>
-                        <span></span>
-                        <span><span class="riser">w</span></span>
-                        <span>_</span>
-                        <span><span class="riser">t</span></span>
-                        <span><span class="riser">h</span></span> 
-                        <span></span>
-                        <span><span class="riser">a</span></span> 
-                        <span></span>
-                     </div>
-                     <div class="wof__row row2">
-                        <span><span class="riser">P</span></span>
-                        <span><span class="riser">e</span></span>
-                        <span><span class="riser">a</span></span>
-                        <span>_</span>
-                        <span><span class="riser">l</span></span> 
-                        <span></span>
-                     </div>
-                     <div class="wof__row row3">
-                        <span><span class="riser">E</span></span>
-                        <span><span class="riser">a</span></span>
-                        <span>_</span>
-                        <span>_</span>
-                        <span>_</span>
-                        <span><span class="riser">n</span></span>
-                        <span><span class="riser">g</span></span>
-                     </div>
-                  </div>
+                  <div class="wof__letters"></div>
                   <div class="wof__clue">
-                     <h2>Pokemon</h2>
+                     <h2></h2>
                   </div>
                </div>
                <div class="wof__actionBoard">
                   <div class="wof__buttonsBoard">
                      <div class="wof__letterBoard">
-                        <button class="has">A</button>
-                        <button>B</button>
-                        <button>C</button>
-                        <button>D</button>
-                        <button>E</button>
-                        <button>F</button>
-                        <button class="has">G</button>
-                        <button>H</button>
-                        <button>I</button>
-                        <button>J</button>
-                        <button>K</button>
-                        <button class="none">L</button>
-                        <button>M</button>
-                        <button>N</button>
-                        <button class="has">O</button>
-                        <button class="has">P</button>
-                        <button>Q</button>
-                        <button class="has">R</button>
-                        <button class="has">S</button>
-                        <button class="has">T</button>
-                        <button>U</button>
-                        <button>V</button>
-                        <button>W</button>
-                        <button>X</button>
-                        <button>Y</button>
-                        <button>Z</button>
+                        <button class="letter-btn">A</button>
+                        <button class="letter-btn">B</button>
+                        <button class="letter-btn">C</button>
+                        <button class="letter-btn">D</button>
+                        <button class="letter-btn">E</button>
+                        <button class="letter-btn">F</button>
+                        <button class="letter-btn">G</button>
+                        <button class="letter-btn">H</button>
+                        <button class="letter-btn">I</button>
+                        <button class="letter-btn">J</button>
+                        <button class="letter-btn">K</button>
+                        <button class="letter-btn">L</button>
+                        <button class="letter-btn">M</button>
+                        <button class="letter-btn">N</button>
+                        <button class="letter-btn">O</button>
+                        <button class="letter-btn">P</button>
+                        <button class="letter-btn">Q</button>
+                        <button class="letter-btn">R</button>
+                        <button class="letter-btn">S</button>
+                        <button class="letter-btn">T</button>
+                        <button class="letter-btn">U</button>
+                        <button class="letter-btn">V</button>
+                        <button class="letter-btn">W</button>
+                        <button class="letter-btn">X</button>
+                        <button class="letter-btn">Y</button>
+                        <button class="letter-btn">Z</button>
                      </div>
                      
                      <div class="wof__strikeBoard">
                         <h2>Strikes:</h2>
-                        <ul class="wof__strikeStatus">
-                           <li>
-                              <span class="wof__strikeStatus--bad"></span>
-                           </li>
-                           <li>
-                              <span class="wof__strikeStatus--good"></span>
-                           </li>
-                           <li>
-                              <span class="wof__strikeStatus--good"></span>
-                           </li>
-                        </ul>
+                        <ul class="wof__strikeStatus"></ul>
                      </div>
-                     
+
                      <div class="wof__ctaBtns">
                         <button class="wof__btn reveal">Reveal</button>
                         <button class="wof__btn nextRound">Next Round</button>
