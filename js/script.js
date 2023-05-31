@@ -1,22 +1,4 @@
 document.addEventListener("DOMContentLoaded", function(){
-   async function fetchJSONFile(url) {
-      try {
-      const response = await fetch(url, {
-            headers: {
-               'Accept': 'application/json',
-            }
-         });
-      if (!response.ok) {
-         throw new Error('Network response was not ok');
-      }
-      const json = await response.json();
-      console.log(json);
-      return json;
-      } catch (error) {
-      console.error('Error fetching JSON file:', error);
-      }
-   }
-
    var wofTexts = [];
    var wofTextIndex = 0;
    var curWofText = "";
@@ -32,8 +14,14 @@ document.addEventListener("DOMContentLoaded", function(){
          setCurWof(curWof);
          document.querySelector(".wof__letters").innerHTML = generate(curWofText);
          document.querySelector(".wof__clue h2").innerText = curWofClue;
+         updateStrikeHtml();
       }
    })
+
+   //regex
+   function isSpecialCharacter(string) {
+      return !(/[a-zA-Z]/.test(string));
+   }
 
    function generate (text, reveal=false, html=[]) {
       let word = text.split(" ");
@@ -50,22 +38,30 @@ document.addEventListener("DOMContentLoaded", function(){
             html.push("</div>");
             html.push("<div class='wof__row'>");
             for (let x=0; x<currWord.length; x++) {
-               if (reveal) {
-                     let className = selectedLetters.includes(currWord[x].toUpperCase()) ? "" : "riser";
-                     html.push("<span><span class='" + className + "'>" + currWord[x] + "</span></span>")
+               if (isSpecialCharacter(currWord[x])) {
+                  html.push("<span><span class='riser'>" + currWord[x] + "</span></span>");                  
                } else {
-                     html.push("<span data-letter='" + currWord[x].toUpperCase() + "'>_</span>");
+                  if (reveal) {
+                        let className = selectedLetters.includes(currWord[x].toUpperCase()) ? "" : "riser";
+                        html.push("<span><span class='" + className + "'>" + currWord[x] + "</span></span>")
+                  } else {
+                        html.push("<span data-letter='" + currWord[x].toUpperCase() + "'>_</span>");
+                  }
                }
             }
             // reset counter
             counter = currWord.length;
          } else {
             for (let x=0; x<currWord.length; x++) {
-               if (reveal) {
-                  let className = selectedLetters.includes(currWord[x].toUpperCase()) ? "" : "riser";
-                  html.push("<span><span class='"+ className + "'>" + currWord[x] + "</span></span>")
+               if (isSpecialCharacter(currWord[x])) {
+                  html.push("<span><span class='riser'>" + currWord[x] + "</span></span>");                  
                } else {
-                     html.push("<span data-letter='" + currWord[x].toUpperCase() + "'>_</span>");
+                  if (reveal) {
+                     let className = selectedLetters.includes(currWord[x].toUpperCase()) ? "" : "riser";
+                     html.push("<span><span class='"+ className + "'>" + currWord[x] + "</span></span>")
+                  } else {
+                        html.push("<span data-letter='" + currWord[x].toUpperCase() + "'>_</span>");
+                  }
                }
             }
          }    

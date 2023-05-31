@@ -1,16 +1,20 @@
 {
    "wofTexts": [
       {
-         "text": "Proxima Midnight",
-         "clue": "Marvel"
+         "text": "When I am afraid, I put my trust in you.",
+         "clue": "Bible Verse"
+      },
+      {
+         "text": "I've got whozits and whatzits galore",
+         "clue": "Ariel"
       },
       {
          "text": "Sprigatito",
          "clue": "Pokemon"
       },
       {
-         "text": "When I am afraid, I put my trust in you.",
-         "clue": "Bible Verse"
+         "text": "Proxima Midnight",
+         "clue": "Marvel"
       },
       {
          "text": "Avisala eshma",
@@ -27,10 +31,6 @@
       {
          "text": "Girl with a Pearl Earring",
          "clue": "Oil Painting"
-      },
-      {
-         "text": "I've got whozits and whatzits galore",
-         "clue": "Ariel"
       },
       {
          "text": "Vincent van Gogh",
